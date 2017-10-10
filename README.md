@@ -5,9 +5,17 @@ To use this code, the minimal input that needs to be specified by a user is:
 
 - number of nodes in each layer
 - number of layers, and 
-- an interlayer dependency tensor that specifies the desired dependency structure between layers (note that the order of the layers, whenever present, needs to be respected in the interlayer dependency tensor). We include three useful examples of interlayer dependency tensors in ```TemporalDependencyMatrix.m```, ```MultiplexDependencyMatrix.m```, and ```BlockMultiplexDependencyMatrix.m```
+- an interlayer dependency tensor that specifies the desired dependency structure between layers. 
 
-The subroutines (1) and (2) have various parameters (which we set to a default parameter choice) that a user can modify as needed. For example, one can:
+The order of the layers, whenever present, needs to be respected in the interlayer dependency tensor. 
+
+Three useful examples of interlayer dependency tensors are included in 
+
+- ```TemporalDependencyMatrix.m```, 
+- ```MultiplexDependencyMatrix.m```, and, 
+- ```BlockMultiplexDependencyMatrix.m```
+
+The subroutines have various parameters (which are set to a default parameter choice) that a user can modify as needed. For example, one can:
 
 - vary the number of nodes in each layer 
 - vary the minimum and maximum expected degrees in each layer 
@@ -20,12 +28,7 @@ The subroutines (1) and (2) have various parameters (which we set to a default p
 
 Furthermore, a user can use any monolayer network model with a planted partition other than DCSBM by using a function other than ```DCSBMNetworkGenerator.m ``` to generated edges for a given planted partition. 
 
-Importantly, the subroutines (1) and (2) are carried out successively in our code and not in parallel, and each can be modified independently as needed. 
-
 Note that Version 1.0 of the code only generates (interdependent) intralayer edges for a given multilayer partition. One can modify it to generate interlayer and/or intralayer edges (see Section 4 in [1]).
-
-More extensive documentation is provided in each function and example use of this code is provided in ```examples_script.m```. See also [1] for a detailed explanation of our generative model (see in particular Section 3 "Generating Sampled Multilayer Partitions" and Section 4 "Sampling Network Edges").
-
 
 ##References:
 
