@@ -19,9 +19,9 @@
 % Multiplex example with uniform interlayer dependencies between all pairs
 % of layers (interlayer depencency tensor as in FIG 3b of [1] and model parameter
 % choices as in FIG 5 and FIG 8 of [1] for specific values of p and mu) 
-
-n_layers=3;
-n_nodes=10;
+clear 
+n_layers=4;
+n_nodes=500;
 p = 0.95; mu = 0.1;
 
 L = MultiplexDependencyMatrix(n_layers,p);
@@ -31,8 +31,34 @@ L = MultiplexDependencyMatrix(n_layers,p);
 a1 = A{1};
 a2 = A{2};
 a3 = A{3};
-A1 = zeros(n_nodes,n_nodes);
-A2 = zeros(n_nodes,n_nodes);
+a4 = A{4};
+A1 = full(a1);
+A2 = full(a2);
+A3 = full(a3);
+A4 = full(a4);
+
+
+save('A1','A1')
+save('A2','A2')
+save('A3','A3')
+save('A4','A4')
+save('L','L')
+save('S','S')
+save('p','p')
+save('mu','mu')
+cm1=['!scp A*.mat ma01-5200-0022:/disk1/maa/sam/random']
+cm2=['!scp mu.mat ma01-5200-0022:/disk1/maa/sam/random']
+cm3=['!scp p.mat ma01-5200-0022:/disk1/maa/sam/random']
+cm4=['!scp S.mat ma01-5200-0022:/disk1/maa/sam/random']
+cm5=['!scp L.mat ma01-5200-0022:/disk1/maa/sam/random']
+eval(cm1)
+eval(cm2)
+eval(cm3)
+eval(cm4)
+eval(cm5)
+
+disp('Completed!')
+
 
 % EXAMPLE 2: TEMPORAL 
 % Temporal example with uniform interlayer dependencies between successive

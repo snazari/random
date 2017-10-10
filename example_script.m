@@ -20,41 +20,39 @@
 % of layers (interlayer depencency tensor as in FIG 3b of [1] and model parameter
 % choices as in FIG 5 and FIG 8 of [1] for specific values of p and mu) 
 
-n_layers=3;
-n_nodes=10;
-p = 0.95; mu = 0.1;
-
-L = MultiplexDependencyMatrix(n_layers,p);
 [A,S]=DirichletDCSBMBenchmark(n_nodes,n_layers,L,...
 'UpdateSteps',200,'theta',1,'communities',2,'q',1,...
 'exponent',-2,'kmin',3,'kmax',150,'mu',mu,'maxreject',100);
 a1 = A{1};
 a2 = A{2};
 a3 = A{3};
-input('Please use Excel now to copy and reshape a1, a2 and a3 and then hit ENTER.')
-A1 = zeros(n_nodes,n_nodes);
-A2 = zeros(n_nodes,n_nodes);
-A3 = zeros(n_nodes,n_nodes);
-[num txt raw]=xlsread('A1.xlsx');
-for i = 1:length(num)
-A1(num(i,1),num(i,2))=num(i,3);
-end
-[num txt raw]=xlsread('A2.xlsx');
-for i = 1:length(num)
-A2(num(i,1),num(i,2))=num(i,3);
-end
-[num txt raw]=xlsread('A3.xlsx');
-for i = 1:length(num)
-A3(num(i,1),num(i,2))=num(i,3);
-end
+a4 = A{4};
+A1 = full(a1);
+A2 = full(a2);
+A3 = full(a3);
+A4 = full(a4);
 save('A1','A1')
 save('A2','A2')
 save('A3','A3')
+save('A4','A4')
 save('L','L')
 save('S','S')
 save('p','p')
 save('mu','mu')
+cm1=['!scp A*.mat ma01-5200-0022:/disk1/maa/sam/random']
+cm2=['!scp mu.mat ma01-5200-0022:/disk1/maa/sam/random']
+cm3=['!scp p.mat ma01-5200-0022:/disk1/maa/sam/random']
+cm4=['!scp S.mat ma01-5200-0022:/disk1/maa/sam/random']
+cm5=['!scp L.mat ma01-5200-0022:/disk1/maa/sam/random']
+eval(cm1)
+eval(cm2)
+eval(cm3)
+eval(cm4)
+eval(cm5)
+
 disp('Completed!')
+
+
 % EXAMPLE 2: TEMPORAL 
 % Temporal example with uniform interlayer dependencies between successive
 % layers (interlayer depencency tensor as in FIG 3a of [1] and model parameter
