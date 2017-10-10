@@ -30,6 +30,6 @@ Furthermore, a user can use any monolayer network model with a planted partition
 
 Note that Version 1.0 of the code only generates (interdependent) intralayer edges for a given multilayer partition. One can modify it to generate interlayer and/or intralayer edges (see Section 4 in [1]).
 
-##References:
+## References:
 
 [1] Generative benchmark models for mesoscale structure in multilayer networks, M. Bazzi, L. G. S. Jeub, A. Arenas, S. D. Howison, M. A. Porter. arXiv:1608.06196.
