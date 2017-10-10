@@ -31,30 +31,9 @@ L = MultiplexDependencyMatrix(n_layers,p);
 a1 = A{1};
 a2 = A{2};
 a3 = A{3};
-input('Please use Excel now to copy and reshape a1, a2 and a3 and then hit ENTER.')
 A1 = zeros(n_nodes,n_nodes);
 A2 = zeros(n_nodes,n_nodes);
-A3 = zeros(n_nodes,n_nodes);
-[num txt raw]=xlsread('A1.xlsx');
-for i = 1:length(num)
-A1(num(i,1),num(i,2))=num(i,3);
-end
-[num txt raw]=xlsread('A2.xlsx');
-for i = 1:length(num)
-A2(num(i,1),num(i,2))=num(i,3);
-end
-[num txt raw]=xlsread('A3.xlsx');
-for i = 1:length(num)
-A3(num(i,1),num(i,2))=num(i,3);
-end
-save('A1','A1')
-save('A2','A2')
-save('A3','A3')
-save('L','L')
-save('S','S')
-save('p','p')
-save('mu','mu')
-disp('Completed!')
+
 % EXAMPLE 2: TEMPORAL 
 % Temporal example with uniform interlayer dependencies between successive
 % layers (interlayer depencency tensor as in FIG 3a of [1] and model parameter
