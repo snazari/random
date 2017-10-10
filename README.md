@@ -1,20 +1,6 @@
 <<<<<<< HEAD
-## MultilayerBenchmark Version 1.0
-### released November 2016
-
-Please cite this code as
-    Lucas G. S. Jeub and Marya Bazzi
-    *"A generative model for mesoscale structure in multilayer networks implemented 
-    in MATLAB,"* https://github.com/MultilayerBenchmark/MultilayerBenchmark (2016)
-
-This package consists of code for the generative model in [1]. It allows a user to generate multilayer networks with planted mesoscale structure (e.g., community structure) in a principled and customisable way. 
-
-Our code consists of a main ```DirichletDCSBMBenchmark.m``` file which contains two main subroutines: 
-
-1. ```PartitionGenerator.m```
- which constructs a planted multilayer partition, and
-2. ```DCSBMNetworkGenerator.m ```
-which constructs a multilayer network for a given planted multilayer partition. 
+## Multilayer Graph Generative Model
+### Sam Nazari October 2017
 
 To use this code, the minimal input that needs to be specified by a user is:
 
@@ -45,11 +31,3 @@ More extensive documentation is provided in each function and example use of thi
 ##References:
 
 [1] Generative benchmark models for mesoscale structure in multilayer networks, M. Bazzi, L. G. S. Jeub, A. Arenas, S. D. Howison, M. A. Porter. arXiv:1608.06196.
-
-##Acknowledgments:
-
-A special thank you to Sam D. Howison, Mason A. Porter, and Alex Arenas for contributing ideas that have helped develop our generative model for mesoscale structure in multilayer networks. 
-=======
-# random
-random files
->>>>>>> 693d4953c7d8cb886b30c094d3324aea36004ada
