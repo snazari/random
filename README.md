@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Multilayer Graph Generative Model
 ### Sam Nazari October 2017
 
