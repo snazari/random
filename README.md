@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## MultilayerBenchmark Version 1.0
 ### released November 2016
 
@@ -48,3 +49,7 @@ More extensive documentation is provided in each function and example use of thi
 ##Acknowledgments:
 
 A special thank you to Sam D. Howison, Mason A. Porter, and Alex Arenas for contributing ideas that have helped develop our generative model for mesoscale structure in multilayer networks. 
+=======
+# random
+random files
+>>>>>>> 693d4953c7d8cb886b30c094d3324aea36004ada
